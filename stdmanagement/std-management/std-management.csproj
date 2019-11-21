@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B09FF2A-3EF7-4DDE-B539-DA775FA16B48}</ProjectGuid>
+    <ProjectGuid>{52057570-CCF0-4240-BBEE-FCB5CA8D19E9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>stdmanagement</RootNamespace>
-    <AssemblyName>stdmanagement</AssemblyName>
+    <RootNamespace>std_management</RootNamespace>
+    <AssemblyName>std-management</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -53,21 +53,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClassManagement.cs" />
-    <Compile Include="CreateClassForm.cs">
+    <Compile Include="CreateStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateClassForm.Designer.cs">
-      <DependentUpon>CreateClassForm.cs</DependentUpon>
+    <Compile Include="CreateStudentForm.Designer.cs">
+      <DependentUpon>CreateStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IndexClassForm.cs">
+    <Compile Include="IndexStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IndexClassForm.Designer.cs">
-      <DependentUpon>IndexClassForm.cs</DependentUpon>
+    <Compile Include="IndexStudentForm.Designer.cs">
+      <DependentUpon>IndexStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models.Context.cs">
       <AutoGen>True</AutoGen>
@@ -84,19 +80,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Models.edmx</DependentUpon>
     </Compile>
+    <Compile Include="PM14010.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UpdateClassForm.cs">
+    <Compile Include="StudentManagement.cs" />
+    <Compile Include="StudentView.cs" />
+    <Compile Include="UpdateStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateClassForm.Designer.cs">
-      <DependentUpon>UpdateClassForm.cs</DependentUpon>
+    <Compile Include="UpdateStudentForm.Designer.cs">
+      <DependentUpon>UpdateStudentForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CreateClassForm.resx">
-      <DependentUpon>CreateClassForm.cs</DependentUpon>
+    <EmbeddedResource Include="CreateStudentForm.resx">
+      <DependentUpon>CreateStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IndexClassForm.resx">
-      <DependentUpon>IndexClassForm.cs</DependentUpon>
+    <EmbeddedResource Include="IndexStudentForm.resx">
+      <DependentUpon>IndexStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,8 +108,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UpdateClassForm.resx">
-      <DependentUpon>UpdateClassForm.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateStudentForm.resx">
+      <DependentUpon>UpdateStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
